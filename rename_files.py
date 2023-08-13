@@ -11,7 +11,7 @@ for filename in os.listdir('.'):
     file_ext = os.path.splitext(filename)[-1].lower()
 
     # If the file is a number and has a relevant extension
-    if filename[:-len(file_ext)].isdigit() and file_ext in ['.cpp', '.py']:
+    if filename[:-len(file_ext)].isdigit() and file_ext in ['.cpp', '.py', '.java']:
         # Get the problem name from the JSON data
         problem_name = data.get(filename[:-len(file_ext)], {}).get('problem', None)
         
